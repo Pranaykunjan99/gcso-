@@ -11,7 +11,10 @@ function setup(){
 
 }
 function draw(){
-    car.velocityX=0
+    
+    background("white")
+    
+    car.velocityX=speed;
    if( wall.x-car.x <(car.width+wall.width)/2){
         car.velocityX=0;
         var deformation=0.5*weight*speed*speed/22509;
@@ -27,6 +30,6 @@ function draw(){
         {
             car.shapeColor=color(0,255,0);
         }
-    
+        drawSprites();
 }
 }
